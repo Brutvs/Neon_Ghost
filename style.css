@@ -1,3 +1,6 @@
+@import "tailwindcss";
+
+
 body {
   background-color: #0a0a0a; /* soft black */
   margin: 0;
@@ -6,36 +9,32 @@ body {
   color: white;
 }
 
-.container {
-  width: 650px;
-  margin: 60px auto; /* center on page */
-  text-align: center;
+a {
+  color: #F5016A; /* This is a common blue link color */
 }
 
-/* 🔹 Top Header Box */
-.top-header-box {
-  height: 20px;
-  width: 650px;
-  background-color: #5f28a6; /* bold purple */
-  line-height: 25px;
-  font-size: 12px;
+/* Change the color when the mouse hovers over the link */
+a:hover {
+  color: #ffffff; /* A different color for the hover state */
 }
 
-/* 🔸 Header Image Box */
-.header-image-box {
-  height: 120px;
-  width: 650px;
-  background-color: #000000; /* placeholder until you add an image */
-  line-height: 150px;
-  font-size: 20px;
-  font-weight: bold;
+img.emoji {
+   height: 1em;
+   width: 1em;
+   margin: 0 .05em 0 .1em;
+   vertical-align: -0.1em;
 }
 
-/* 🔻 Bottom Header Box */
-.bottom-header-box {
-  height: 20px;
-  width: 650px;
-  background-color: #5f28a6;
-  line-height: 25px;
-  font-size: 12px;
+img {
+  float: left;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
 }
+
+h1 {
+    color: white;
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000;
+}
+

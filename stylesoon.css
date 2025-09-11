@@ -1,0 +1,170 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Noto+Color+Emoji&family=Playwrite+AU+TAS:wght@100..400&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0F0906;
+}
+
+.wrapper {
+  display: flex;  
+  gap: 100px;
+}
+
+.container {
+  background: url("images/bgsmall.jpg") no-repeat center center;
+  background-size: cover; 
+  width: 300px;
+  height: 200px;
+  flex-shrink: 0;
+  border: 1px solid #DFC2A9;
+}
+
+.container2 {
+  background: url("images/bgsmall2.jpg") no-repeat center center;
+  background-size: cover; 
+  width: 300px;
+  height: 200px;
+  flex-shrink: 0;
+  border: 1px solid #DFC2A9;
+}
+
+.container3 {
+  background: url("images/bgsmall3.jpg") no-repeat center center;
+  background-size: cover; 
+  width: 300px;
+  height: 200px;
+  flex-shrink: 0;
+  border: 1px solid #DFC2A9;
+}
+  
+.text {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.line * {
+  display: inline;
+  margin: 1px;
+  padding: 2px;
+}
+
+.line {
+  font-family: "Dosis", sans-serif;
+  font-size: 14px;
+  color: #DFC2A9;
+  display: inline-block; /* allows margin to work vertically */
+  background-color: #220f07;
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin: 1px 0; /* small gap above/below */
+}
+
+
+.line-title {
+  font-family: "Dosis", sans-serif;
+  font-size: 16px;
+  color: #DFC2A9;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline;
+  background-color: #220f07;
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin: 1px; /* tiny outside gap */
+}
+
+
+.line a {
+  font-family: "Dosis", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.neonghost {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px; /* space between image and text */
+  padding: 3px;
+}
+
+.neonghost img{
+  width: 40px;
+  height: 40px;
+}
+
+.brutusvon {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between image and text */
+  padding: 3px;
+}
+
+.brutusvon img{
+  width: 40px;
+  height: 40px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between image and text */
+  padding: 3px;
+}
+
+.contact img{
+  width: 40px;
+  height: 40px;
+}
+
+
+a {
+  color: #bf0603;
+}
+
+a:hover {
+  color: #DFC2A9;
+
+img.emoji {
+   height: 1em;
+   width: 1em;
+   margin: 0 .05em 0 .1em;
+   vertical-align: -0.1em;
+}
+
+/* 1️⃣ Center the container both horizontally and vertically */
+.comingsoon {
+    /* Make the container fill the whole viewport */
+    min-height: 100vh;               /* ensures vertical centering works */
+    display: flex;
+    align-items: center;            /* vertical alignment */
+    justify-content: center;        /* horizontal alignment */
+    flex-direction: column;         /* stack image & fallback vertically */
+}
+
+/* 2️⃣ Image sizing – full width on large screens, limited height */
+.imgcenter {
+    max-width: 100%;                /* never exceed container width */
+    height: auto;                   /* keep aspect ratio */
+}
+
+/* 3️⃣ Show the image on ≥750 px, hide the fallback text */
+@media (min-width: 750px) {
+    .fallback-text { display: none; }
+}
+
+/* 4️⃣ On <750 px, hide the image and show the fallback text */
+@media (max-width: 749px) {
+    .responsive-img { display: none; }
+    .fallback-text {
+        display: block;
+        font-size: 1rem;           /* style as you like */
+        text-align: center;
+        margin: 0 1rem;            /* optional padding */
+    }
+}
